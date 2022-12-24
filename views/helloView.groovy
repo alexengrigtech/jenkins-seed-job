@@ -1,7 +1,10 @@
 listView('hello-view') {
+    description('View of hello-jobs.')
+
     jobs {
-        name('hello-job')
+        regex(/hello-(.+-)?job/)
     }
+
     columns {
         status()
         weather()
