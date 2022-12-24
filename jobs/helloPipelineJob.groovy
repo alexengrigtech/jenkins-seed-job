@@ -15,13 +15,8 @@ pipelineJob('hello-pipeline-job') {
             description('Select a greeting:')
             choiceType('SINGLE_SELECT')
             groovyScript {
-                script("""[
-'Hello',
-'Good morning',
-'Good afternoon',
-'Good evening',
-]""")
-                fallbackScript("['Oops']")
+                script('["Hello", "Good morning", "Good afternoon", "Good evening"]')
+                fallbackScript('["Oops"]')
             }
         }
 
