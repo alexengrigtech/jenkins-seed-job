@@ -11,6 +11,20 @@ pipelineJob('hello-pipeline-job') {
     }
 
     parameters {
+        activeChoiceParam('GREETING') {
+            description('Select a greeting:')
+            choiceType('SINGLE_SELECT')
+            groovyScript {
+                script("""[
+'Hello',
+'Good morning',
+'Good afternoon',
+'Good evening',
+]""")
+                fallbackScript("['Oops']")
+            }
+        }
+
         stringParam {
             name('NAME')
             defaultValue('World')
