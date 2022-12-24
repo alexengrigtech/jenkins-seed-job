@@ -1,7 +1,15 @@
 #!/usr/bin/env groovy
 
-job('seedJob') {
-    steps {
-        shell('echo Seed-job from another repository!')
+pipeline {
+    agent any
+
+    stages {
+        stage('Register jobs') {
+            steps {
+                jobDsl {
+                    targets 'jobs/**/*.groovy'
+                }
+            }
+        }
     }
 }
