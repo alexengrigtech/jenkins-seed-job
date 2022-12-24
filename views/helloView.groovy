@@ -27,7 +27,6 @@ listView('hello-view') {
         scmType()
         slaveOrLabel()
         status()
-        testResult()
         userName()
         weather()
         workspace()
