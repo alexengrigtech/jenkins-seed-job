@@ -1,13 +1,7 @@
 #!/usr/bin/env groovy
 
-pipeline {
-    agent any
-
-    stages {
-        stage('Generate jobs') {
-            steps {
-                echo "Generating jobs!"
-            }
-        }
+job('seedJob') {
+    steps {
+        shell('echo Seed-job from another repository!')
     }
 }
