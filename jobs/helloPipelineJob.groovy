@@ -9,4 +9,13 @@ pipelineJob('hello-pipeline-job') {
             }
         }
     }
+
+    parameters {
+        stringParam {
+            name('NAME')
+            defaultValue('World')
+            description("What's your name?")
+            trim(true)
+        }
+    }
 }

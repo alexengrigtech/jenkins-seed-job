@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Print greeting') {
             steps {
-                echo 'Hello, World!'
+                echo "Hello, ${NAME}!"
             }
         }
     }
