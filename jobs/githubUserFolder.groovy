@@ -4,7 +4,9 @@ organizationFolder('github-alexengrig-folder') {
     description('Organization-folder for GitHub alexengrig')
 
     organizations {
-        repoOwner('alexengrig')
-        includes('jenya-application')
+        github {
+            repoOwner('alexengrig')
+            includes('jenya-application')
+        }
     }
 }
