@@ -25,11 +25,11 @@ Russian""")
                 script('''
                 switch(LANGUAGE) {
                     case 'English':
-                        return ['Hello', 'Hi', 'Good morning', 'Good afternoon', 'Good evening']
+                        return ["Hi","Hello","Good morning","Good afternoon","Good evening"]
                     case 'Russian':
-                        return ['Здравствуйте', 'Привет', 'Доброе утро', 'Добрый день', 'Добрый вечер']
+                        return ["Здравствуйте","Привет","Доброе утро","Добрый день","Добрый вечер"]
                     default:
-                        return [LANGUAGE]
+                        return ["Oops, no for " + LANGUAGE]
                 }
                 ''')
                 fallbackScript('["Oops"]')
