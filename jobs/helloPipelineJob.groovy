@@ -14,26 +14,22 @@ pipelineJob('hello-pipeline-job') {
         choiceParam {
             name('LANGUAGE')
             description('Select a language:')
-            choices("""
-            English
-            Russian
-            """.trim())
+            choices("""English
+Russian""")
         }
 
         activeChoiceReactiveParam('GREETING') {
             description('Select a greeting:')
             choiceType('SINGLE_SELECT')
             groovyScript {
-                script('''
-                switch(LANGUAGE) {
-                    case 'English':
-                        return ["Hi","Hello","Good morning","Good afternoon","Good evening"]
-                    case 'Russian':
-                        return ["Здравствуйте","Привет","Доброе утро","Добрый день","Добрый вечер"]
-                    default:
-                        return ["Oops, no for " + LANGUAGE]
-                }
-                '''.trim())
+                script('''switch(LANGUAGE) {
+    case 'English':
+        return ["Hi","Hello","Good morning","Good afternoon","Good evening"]
+    case 'Russian':
+        return ["Здравствуйте","Привет","Доброе утро","Добрый день","Добрый вечер"]
+    default:
+        return ["Oops, no for " + LANGUAGE]
+}''')
                 fallbackScript('["Oops"]')
             }
             referencedParameter('LANGUAGE')
