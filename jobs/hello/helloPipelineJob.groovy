@@ -5,7 +5,7 @@ pipelineJob('hello-pipeline-job') {
         cpsScm {
             scm {
                 github('alexengrig/jenya-seed-job')
-                scriptPath('pipelines/helloPipelineJob.jenkinsfile')
+                scriptPath('pipelines/hello/helloPipelineJob.jenkinsfile')
             }
         }
     }
