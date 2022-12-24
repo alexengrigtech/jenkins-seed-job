@@ -1,5 +1,5 @@
 listView('hello-view') {
     jobs {
-        name('hello')
+        name('hello-job')
     }
 }
