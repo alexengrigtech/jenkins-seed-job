@@ -14,8 +14,10 @@ pipelineJob('hello-pipeline-job') {
         choiceParam {
             name('LANGUAGE')
             description('Select a language:')
-            choices("""English
-Russian""")
+            choices("""
+            English
+            Russian
+            """.trim())
         }
 
         activeChoiceReactiveParam('GREETING') {
@@ -31,7 +33,7 @@ Russian""")
                     default:
                         return ["Oops, no for " + LANGUAGE]
                 }
-                ''')
+                '''.trim())
                 fallbackScript('["Oops"]')
             }
             referencedParameter('LANGUAGE')
