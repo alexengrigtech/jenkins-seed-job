@@ -1,5 +1,5 @@
 job('hello-job') {
     steps {
-        helloWorld()
+        shell('echo Hello, World!')
     }
 }
