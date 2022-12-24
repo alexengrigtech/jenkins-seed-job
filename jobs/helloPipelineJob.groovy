@@ -1,5 +1,5 @@
 pipelineJob('hello-pipeline-job') {
-    description('Pipeline-job to print "Hello, World!".')
+    description('Pipeline-job to print "Hello, $NAME!".')
 
     definition {
         cpsScm {
