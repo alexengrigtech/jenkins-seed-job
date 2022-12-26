@@ -7,7 +7,7 @@ pipeline {
         stage('Print greeting') {
             steps {
                 echo("${GREETING}, ${NAME}!")
-                echo("Previous name: ${PREV_NAME}")
+                echo("Previous name: ${PREV_NAME:none}")
                 script {
                     globalEnv.set('PREV_NAME', NAME)
                 }
