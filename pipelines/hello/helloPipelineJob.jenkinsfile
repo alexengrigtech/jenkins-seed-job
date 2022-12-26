@@ -10,7 +10,7 @@ pipeline {
                 script {
                     if (env.PREV_NAME != null) {
                         echo("Previous name: ${PREV_NAME}")
-                    }
+                    } else
                         echo("Previous name: none")
                     }
                     globalEnv.set('PREV_NAME', NAME)
