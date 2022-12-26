@@ -7,6 +7,10 @@ pipeline {
         stage('Print greeting') {
             steps {
                 echo("${GREETING}, ${NAME}!")
+                script {
+                    def var = 'foobar'
+                    echo(var)
+                }
             }
         }
     }
