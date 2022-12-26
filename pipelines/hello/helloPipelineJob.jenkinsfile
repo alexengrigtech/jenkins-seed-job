@@ -8,8 +8,11 @@ pipeline {
             steps {
                 echo("${GREETING}, ${NAME}!")
                 script {
-                    def var = 'foobar'
-                    echo(var)
+                    if (env.PREV_NAME != null) {
+                        echo("Previous name: ${PREV_NAME}")
+                    } else
+                        echo("Previous name: none")
+                    }
                 }
             }
         }
